@@ -11,10 +11,20 @@ http://www.orangepi.cn/html/hardWare/computerAndMicrocontrollers/service-and-sup
 - 使用ssh连接，先查看ip地址
 - 客户端使用ssh-keygen -R <ip> 更新远程秘钥
 - ssh远程登录
+- 更新系统包数据库sudo pacman -Sy
+- 安装mosh sudo pacman -S mosh
+- shell 美化curl -s https://ohmyposh.dev/install.sh | bash -s
+- echo 'export PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc
+- source ~/.bashrc
+
+# 2. 安装 mosh
+sudo pacman -S mosh
 
 # mipi摄像头调试
 参考orangepi5手册第467页
-
+sudo vim /boot/extlinux/extlinux.conf 
+添加此配置： Cam3接 ov13850
+FDTOVERLAYS /dtbs/rockchip/overlay/rk3588-ov13850-c3.dtbo
 
 
 
